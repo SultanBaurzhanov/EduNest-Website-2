@@ -26,6 +26,7 @@
     <link rel='stylesheet' id='elementor-post-22844-css' href='https://10web-site.ai/394/wp-content/uploads/sites/406/elementor/css/post-22844.css?ver=1738220243' type='text/css' media='all' />
     <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=block&#038;ver=6.7.1' type='text/css' media='all' />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><script type="text/javascript" src="https://10web-site.ai/394/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="page-template-default page page-id-22844 page-child parent-pageid-22842 theme-tenweb-website-builder-theme woocommerce-no-js e-wc-error-notice e-wc-message-notice e-wc-info-notice elementor-default elementor-kit-22864 elementor-page elementor-page-22844">
       		<div data-elementor-type="twbb_header" data-elementor-id="22857" class="elementor elementor-22857">
@@ -121,6 +122,50 @@
 				</div>
 					</div>
 		</div>
+					</div>
+					<div class="max-w-4xl mx-auto py-16 px-6">
+						<h2 id="formTitle" class="text-4xl font-bold text-center">Find Your Ideal University</h2>
+						<p id="formSubtitle" class="text-center text-gray-600 mt-3">EduNest helps you discover universities that align with your aspirations.</p>
+						
+						<form class="mt-8 bg-gray-100 p-8 rounded-xl shadow-lg" id="eduForm">
+							<label class="block mb-4">
+								<span class="text-gray-700 font-semibold">Full Name</span>
+								<input type="text" id="fullName" class="mt-2 p-3 w-full border rounded-md" placeholder="Enter your name" required>
+							</label>
+							
+							<label class="block mb-4">
+								<span class="text-gray-700 font-semibold">Preferred Major</span>
+								<input type="text" id="major" class="mt-2 p-3 w-full border rounded-md" placeholder="e.g., Computer Science" required>
+							</label>
+							
+							<label class="block mb-4">
+								<span class="text-gray-700 font-semibold">Budget ($ per year)</span>
+								<input type="number" id="budget" class="mt-2 p-3 w-full border rounded-md" placeholder="e.g., 15000" required>
+							</label>
+							
+							<label class="block mb-4">
+								<span class="text-gray-700 font-semibold">Preferred Study Location</span>
+								<input type="text" id="location" class="mt-2 p-3 w-full border rounded-md" placeholder="e.g., USA, Russia, China" required>
+							</label>
+				
+							<label class="block mb-4">
+								<span class="text-gray-700 font-semibold">Academic Achievements</span>
+								<input type="text" id="achievements" class="mt-2 p-3 w-full border rounded-md" placeholder="e.g., High GPA, Extracurricular Activities" required>
+							</label>
+				
+							<label class="block mb-4">
+								<span class="text-gray-700 font-semibold">Career Goals</span>
+								<input type="text" id="goals" class="mt-2 p-3 w-full border rounded-md" placeholder="e.g., Software Engineering, Business Management" required>
+							</label>
+							
+							<button type="submit" class="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition">Get Recommendations</button>
+						</form>
+						
+						<!-- Container for displaying recommendations -->
+						<div id="recommendations" class="mt-8 hidden">
+							<h3 class="text-2xl font-semibold text-center">Recommended Universities</h3>
+							<ul id="uniList" class="mt-4 space-y-4 text-gray-700"></ul>
+						</div>
 					</div>
 		</section>
 				</div>
@@ -237,6 +282,41 @@
 			document.body.className = c;
 		})();
 	</script>
+	<style>
+		.hidden {
+		  display: none;
+		}
+		.fade-in {
+		  opacity: 0;
+		  transform: translateY(10px);
+		  animation: fadeIn 0.5s ease-in-out forwards;
+		}
+		.fade-out {
+		  opacity: 1;
+		  transform: translateY(0);
+		  animation: fadeOut 0.5s ease-in-out forwards;
+		}
+		@keyframes fadeIn {
+		  from {
+			opacity: 0;
+			transform: translateY(10px);
+		  }
+		  to {
+			opacity: 1;
+			transform: translateY(0);
+		  }
+		}
+		@keyframes fadeOut {
+		  from {
+			opacity: 1;
+			transform: translateY(0);
+		  }
+		  to {
+			opacity: 0;
+			transform: translateY(-10px);
+		  }
+		}
+	  </style>
 	<link rel='stylesheet' id='twbb-domain-connect-style-css' href='https://10web-site.ai/394/wp-content/plugins/tenweb-builder/Apps/PreviewUpgrade/assets/style/domain_connect.css?ver=1.26.43' type='text/css' media='all' />
     <link rel='stylesheet' id='wc-blocks-style-css' href='https://10web-site.ai/394/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-9.4.3' type='text/css' media='all' />
     <link rel='stylesheet' id='twbb-preview-upgrade-style-css' href='https://10web-site.ai/394/wp-content/plugins/tenweb-builder/Apps/PreviewUpgrade/assets/style/preview_upgrade.css?ver=1.26.43' type='text/css' media='all' />
@@ -252,6 +332,93 @@
     <link rel='stylesheet' id='widget-divider-css' href='https://10web-site.ai/394/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.25.10' type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://10web-site.ai/394/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://10web-site.ai/394/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' type='text/css' media='all' />
+	<script>
+		document.getElementById("eduForm").addEventListener("submit", async function(event) {
+		event.preventDefault();
+
+		const location = document.getElementById("location").value.trim();
+		const formContainer = document.getElementById("eduForm");
+		const formTitle = document.getElementById("formTitle");
+		const formSubtitle = document.getElementById("formSubtitle");
+		const recommendationsContainer = document.getElementById("recommendations");
+		const uniList = document.getElementById("uniList");
+		const backButton = document.createElement("button");
+
+		uniList.innerHTML = "";
+
+		if (!location) {
+			alert("Please enter a preferred study location.");
+			return;
+		}
+
+		// Плавно скрываем форму, заголовок и подзаголовок
+		formContainer.classList.add("fade-out");
+		formTitle.classList.add("fade-out");
+		formSubtitle.classList.add("fade-out");
+		setTimeout(() => {
+			formContainer.classList.add("hidden");
+			formTitle.classList.add("hidden");
+			formSubtitle.classList.add("hidden");
+		}, 500);
+
+		try {
+			const response = await fetch(`http://universities.hipolabs.com/search?country=${encodeURIComponent(location)}`);
+			if (!response.ok) {
+				throw new Error("Failed to fetch universities");
+			}
+			const universities = await response.json();
+
+			if (universities.length === 0) {
+				uniList.innerHTML = "<li class='text-center text-gray-600'>No universities found for the selected location.</li>";
+			} else {
+				universities.forEach(uni => {
+					const listItem = document.createElement("li");
+					listItem.className = "p-4 bg-white shadow-md rounded-md";
+					listItem.innerHTML = `<strong>${uni.name}</strong> <br> (${uni.web_pages[0] ? `<a href='${uni.web_pages[0]}' target='_blank' class='text-blue-500'>Visit website</a>` : "No website available"})`;
+					uniList.appendChild(listItem);
+				});
+			}
+
+			// Добавляем кнопку возврата
+			backButton.textContent = "Back to Form";
+			backButton.className = "mt-4 px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition";
+			backButton.addEventListener("click", function() {
+				recommendationsContainer.classList.add("fade-out");
+				setTimeout(() => {
+					recommendationsContainer.classList.add("hidden");
+					formContainer.classList.remove("hidden");
+					formTitle.classList.remove("hidden");
+					formSubtitle.classList.remove("hidden");
+					formContainer.classList.remove("fade-out");
+					formTitle.classList.remove("fade-out");
+					formSubtitle.classList.remove("fade-out");
+					formContainer.classList.add("fade-in");
+					formTitle.classList.add("fade-in");
+					formSubtitle.classList.add("fade-in");
+					document.getElementById("eduForm").reset(); // Очищаем форму
+				}, 500);
+			});
+
+			uniList.appendChild(backButton);
+
+			// Плавно показываем рекомендации
+			setTimeout(() => {
+				recommendationsContainer.classList.remove("hidden");
+				recommendationsContainer.classList.add("fade-in");
+			}, 500);
+
+		} catch (error) {
+			console.error("Error fetching universities:", error);
+			uniList.innerHTML = "<li class='text-center text-red-600'>An error occurred while fetching data.</li>";
+			setTimeout(() => {
+				recommendationsContainer.classList.remove("hidden");
+				recommendationsContainer.classList.add("fade-in");
+			}, 500);
+		}
+	});
+
+		</script>
+		
     <script type="text/javascript" src="https://10web-site.ai/394/wp-content/plugins/tenweb-builder/Apps/SectionGeneration/assets/script/section_generation_embed.min.js?ver=1.26.43" id="twbb-section-generation-embed-script-js"></script>
     <script type="text/javascript" src="https://10web-site.ai/394/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=9.4.3" id="sourcebuster-js-js"></script>
     <script type="text/javascript" src="https://10web-site.ai/394/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=9.4.3" id="wc-order-attribution-js"></script>
