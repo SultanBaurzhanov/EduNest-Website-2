@@ -1,0 +1,300 @@
+.hero-content2 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+    }
+
+    .hero-placeholder-image10 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image11 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image12 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image13 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image14 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image15 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image16 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image17 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image18 {
+   width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image19 {
+   width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image20 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image21 {
+   width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-row-container2 {
+    width: 100%;
+    }
+    
+    .hero-placeholder-image22 {
+   width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image23 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image24 {
+   width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image25 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image26 {
+   width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image27 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image28 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image29 {
+   width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image30 {
+   width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image31 {
+   width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image32 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-placeholder-image33 {
+    width: 400px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+    
+    .hero-container2 {
+    display: contents;
+    }
+    
+    @media(max-width: 767px) {
+    .hero-content2 {
+        width: 100%;
+    }
+    }
+    
+    @media(max-width: 479px) {
+    .hero-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+    .hero-button1 {
+        width: 100%;
+    }
+    .hero-button2 {
+        width: 100%;
+    }
+    }
+    .thq-img-ratio-1-1 {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: var(--dl-radius-radius-imageradius);
+    }
+
+    .thq-grid-auto-300 {
+    display: grid;
+    grid-gap: var(--dl-space-space-oneandhalfunits);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .thq-animated-group-vertical-reverse {
+    gap: var(--dl-space-space-unit);
+    width: 100%;
+    display: flex;
+    animation: scroll-y 20s linear infinite;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+    animation-direction: reverse;
+    }
+    
+    .thq-animated-group-horizontal-reverse {
+    gap: var(--dl-space-space-unit);
+    display: flex;
+    animation: scroll-x 20s linear infinite;
+    min-width: 100%;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: space-around;
+    animation-direction: reverse;
+    }
+    
+    .thq-animated-group-vertical {
+    gap: var(--dl-space-space-unit);
+    width: 100%;
+    display: flex;
+    animation: scroll-y 20s linear infinite;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+    }
+    
+    .thq-animated-group-horizontal {
+    gap: var(--dl-space-space-unit);
+    display: flex;
+    animation: scroll-x 20s linear infinite;
+    min-width: 100%;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: space-around;
+    }
+    
+    .thq-animated-group-container-vertical {
+    gap: var(--dl-space-space-unit);
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    }
+    
+    .thq-animated-group-container-horizontal {
+    gap: var(--dl-space-space-unit);
+    display: flex;
+    overflow: hidden;
+    }
+    
+    .thq-mask-image-vertical {
+    mask-image: linear-gradient(to bottom, transparent, black 1%, black 99%, transparent);
+    }
+    
+    .thq-mask-image-horizontal {
+    mask-image: linear-gradient(to right, transparent, black 1%, black 99%, transparent);
+    }
+    
+    .thq-img-scale {
+    transition: 0.3s;
+    }
+    
+    .thq-img-scale:hover {
+    scale: 1.05;
+    }
+    
+    .thq-animated-card-bg-1 {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+    border-radius: var(--dl-radius-radius-cardradius);
+    background-color: var(--dl-color-theme-accent1);
+    }
+    
+    .thq-animated-card-bg-2 {
+    transition: transform 0.3s;
+    border-radius: var(--dl-radius-radius-cardradius);
+    background-color: var(--dl-color-theme-accent2);
+    }
